@@ -12,3 +12,7 @@ function take() {
 	mkdir $1
 	cd $1
 }
+
+function git-rm-after() {
+	for i in `git status | grep deleted | awk '{print $3}'`; do git rm $i; done
+}
