@@ -1,0 +1,5 @@
+# MacPorts Installer addition on 2010-11-19_at_16:17:47: adding an appropriate PATH variable for use with MacPorts.
+export PATH=~/bin:/opt/local/bin:/opt/local/sbin:$PATH
+export EDITOR='mate_wait'
+# Finished adapting your PATH environment variable for use with MacPorts.
+export SSH_ENV="$HOME/.ssh/environment"
