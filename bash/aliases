@@ -3,6 +3,7 @@ alias g="git status"
 alias reload="source ~/bin/dotfiles/bash/aliases"
 alias ea="mate -w ~/bin/dotfiles/bash/aliases && reload"
 alias ll='ls -Fls'
+alias ee="mate -w ~/bin/dotfiles/bash/env && source ~/bin/dotfiles/bash/env"
 
 function gg() {
 	git add .
