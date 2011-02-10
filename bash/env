@@ -4,3 +4,4 @@ export EDITOR='mate_wait'
 # Finished adapting your PATH environment variable for use with MacPorts.
 export SSH_ENV="$HOME/.ssh/environment"
 export ARCHFLAGS="-arch x86_64"
+export RUBY_LIB='echo $LOAD_PATH.unshift("#{`pwd`.chomp("\n")}/lib")'
