@@ -7,3 +7,6 @@ git config --global core.excludesfile ~/.gitignore_global
 echo mate
 ln -s /Applications/TextMate.app/Contents/Resources/mate ~/bin/mate
 ln -s mate ~/bin/mate_wait
+
+echo ruby
+ln -s ~/bin/dotfiles/ruby/.irbrc ~/.irbrc
