@@ -10,6 +10,10 @@ function gg() {
 	git commit -v -a -m "$*"
 }
 
+function gra() {
+	 git remote add origin git@github.com:cfeduke/$1.git
+}
+
 function take() {
 	mkdir $1
 	cd $1
