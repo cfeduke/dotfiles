@@ -15,3 +15,6 @@ ln -s mate ~/bin/mate_wait
 
 echo ruby
 ln -s ~/bin/dotfiles/ruby/.irbrc ~/.irbrc
+
+echo terminitor
+ln -s ~/bin/dotfiles/ruby/.terminitor/ ~/.terminitor

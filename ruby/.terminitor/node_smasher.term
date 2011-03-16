@@ -1,0 +1,11 @@
+before { run "cd ~/Projects/node_smasher" }
+run "mate ."
+
+window :bounds => [866, 469, 1682, 915], :settings => "Homebrew" do
+	run "shotgun"
+end
+
+window :bounds => [866, 23, 1678, 469], :settings => "Homebrew" do
+	run "./script/console"
+end
+
