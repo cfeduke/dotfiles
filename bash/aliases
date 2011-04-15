@@ -7,6 +7,8 @@ alias ee="mate -w ~/bin/dotfiles/bash/env && source ~/bin/dotfiles/bash/env"
 alias svn-rm-r='find . -name ".svn" -type d -exec rm -rf {} \;'
 alias redisd='redis-server /usr/local/etc/redis.conf'
 
+alias go="git checkout"
+
 function gg() {
 	git add . -A
 	git commit -v -a -m "$*"
