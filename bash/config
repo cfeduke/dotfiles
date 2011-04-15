@@ -4,7 +4,7 @@ GREEN='\[\033[1;32m\]'
 white='\[\033[0;37m\]'
 WHITE='\[\033[1;37m\]'
 
-export PS1="[ \w ] ( ${white}\u${green}@${white}\h${GREEN} ) ${white}$(vcprompt)
+export PS1="[ \w ] ( ${white}\u${green}@${white}\h${GREEN} ) ${white}$
 ${GREEN}\$ ${green}"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.

@@ -5,9 +5,10 @@ alias ea="mate -w ~/bin/dotfiles/bash/aliases && reload"
 alias ll='ls -Fls'
 alias ee="mate -w ~/bin/dotfiles/bash/env && source ~/bin/dotfiles/bash/env"
 alias svn-rm-r='find . -name ".svn" -type d -exec rm -rf {} \;'
+alias redisd='redis-server /usr/local/etc/redis.conf'
 
 function gg() {
-	git add .
+	git add . -A
 	git commit -v -a -m "$*"
 }
 
