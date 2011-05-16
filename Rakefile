@@ -57,4 +57,9 @@ namespace :install do
     install_config_file args[:force], 'ruby', '.irbrc'
   end
   
+  desc "finder changes"
+  task :finder do |t|
+    sh "defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES"
+    puts 'ctrl+cmd+click Finder and Relaunch'
+  end
 end
