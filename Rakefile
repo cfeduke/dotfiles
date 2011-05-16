@@ -5,7 +5,7 @@ namespace :install do
     config_path = File.join(@path, args)
     dest_path = File.join(File.expand_path("~"), args.last)
     
-    if force
+    if force and File.exist? dest_path
       FileUtils.rm dest_path
     end
     
@@ -29,7 +29,7 @@ namespace :install do
     end
     
     desc "installs global git ignore"
-    task :task_name, :force do |t, args|
+    task :gitignore, :force do |t, args|
       install_config_file args[:force], 'git', '.gitignore_global'
     end
   end
