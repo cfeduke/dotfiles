@@ -52,9 +52,15 @@ namespace :install do
     install_config_file args[:force], '.bashrc'
   end
   
-  desc "interactive ruby (irb) config"
-  task :irbconfig, :force do |t, args|
-    install_config_file args[:force], 'ruby', '.irbrc'
-  end
+  namespace :ruby do
+    desc "interactive ruby (irb) config"
+    task :irbconfig, :force do |t, args|
+      install_config_file args[:force], 'ruby', '.irbrc'
+    end
+    desc ".gemrc file"
+    task :gemrc, :force do |t, args|
+      install_config_file args[:force], '.gemrc'
+    end
+  end  
   
 end
