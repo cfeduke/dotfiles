@@ -26,3 +26,8 @@ function take() {
 function git-rm-after() {
 	for i in `git status | grep deleted | awk '{print $3}'`; do git rm $i; done
 }
+
+function git-whoops() {
+  git add . -A
+  git reset --hard HEAD
+}
