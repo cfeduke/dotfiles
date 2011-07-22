@@ -31,3 +31,8 @@ function git-whoops() {
   git add . -A
   git reset --hard HEAD
 }
+
+function git-xcode() {
+  cp $HOME/bin/dotfiles/git/xcode4_gitignore ./.gitignore
+  cp $HOME/bin/dotfiles/git/xcode4_gitattributes ./.gitattributes
+}
