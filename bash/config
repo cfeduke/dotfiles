@@ -3,8 +3,10 @@ green='\[\033[0;32m\]'
 GREEN='\[\033[1;32m\]'
 white='\[\033[0;37m\]'
 WHITE='\[\033[1;37m\]'
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # for RVM completion
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then source `brew --prefix`/etc/bash_completion.d/git-completion.bash; fi # for Git completion
 
-export PS1="[ \w ] ( ${white}\u${green}@${white}\h${GREEN} ) ${white}$
+export PS1="[ \w ] ( ${white}$(~/.rvm/bin/rvm-prompt)${green}:${white}\$(__git_ps1 \"%s\")${GREEN} ) ${white}
 ${GREEN}\$ ${green}"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
