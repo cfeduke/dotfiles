@@ -6,8 +6,11 @@ alias ll='ls -Fls'
 alias ee="mate -w ~/bin/dotfiles/bash/env && source ~/bin/dotfiles/bash/env"
 alias svn-rm-r='find . -name ".svn" -type d -exec rm -rf {} \;'
 alias redisd='redis-server /usr/local/etc/redis.conf'
+alias aliases='cat ~/bin/dotfiles/bash/aliases'
 
 alias go="git checkout"
+
+alias git-ds_store='find . -name ".DS_Store" | xargs git rm'
 
 function gg() {
 	git add . -A

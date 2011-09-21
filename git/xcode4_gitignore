@@ -6,6 +6,7 @@
 *.pyc 
 *~.nib/
 build/*
+*.xcworkspace
 
 # Textmate - if you build your xcode projects with it
 *.tm_build_errors
