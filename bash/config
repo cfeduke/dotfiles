@@ -7,6 +7,6 @@ WHITE='\[\033[1;37m\]'
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # for RVM completion
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then source `brew --prefix`/etc/bash_completion.d/git-completion.bash; fi # for Git completion
 
-export PS1="[ \w ] ( ${white}$(~/.rvm/bin/rvm-prompt)${green}:${white}\$(__git_ps1 \"%s\")${GREEN} ) ${white}
+export PS1="[ \w ] ( ${white}\$(~/.rvm/bin/rvm-prompt i v p g)${green}:${white}\$(__git_ps1 \"%s\")${GREEN} ) ${white}
 ${GREEN}\$ ${green}"
 
