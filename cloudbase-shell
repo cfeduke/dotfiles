@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "root's password is 'secret'"
+/usr/local/cloudbase-current/bin/cloudbase.sh shell -u root

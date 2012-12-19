@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$1" == "old" ]; then
+  PATH=/Users/cfeduke/Projects/software/tank/cb/hadoop-0.20.2
+else
+  PATH=/usr/local/hadoop-1.1.1
+fi
+if [ -e "/usr/local/hadoop-current" ]; then
+  /bin/rm "/usr/local/hadoop-current"
+fi
+/bin/ln -s "$PATH" /usr/local/hadoop-current

@@ -1,0 +1,14 @@
+#!/bin/bash
+#result=`lsof -i TCP | grep "50095 (LISTEN)"`
+#result=`ps -ef | grep -v grep | grep cloudbase`
+url=${CLOUDBASE_MONITOR_URL:-"localhost:50095"}
+# the first time this executes it takes a few seconds, subsequent not so bad
+result=`curl -sL -w "%{http_code}\\n" "http://$url" -o /dev/null | grep 200`
+if [ -n "$result" ]; then
+	echo "[INFO] Cloudbase Monitor is running at $url"
+	exit 0
+else
+	echo "[ERROR] Cloudbase Monitor is NOT running at $url"
+	exit 1
+fi
+

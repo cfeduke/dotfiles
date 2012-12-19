@@ -1,0 +1,42 @@
+#!/usr/bin/env perl
+use Getopt::Long;
+use Pod::Usage;
+
+my $sample = 0.01;
+my $help = 0;
+my $args = GetOptions("sample=f" => \$sample,
+                      "help"     => \$help);
+
+pod2usage(1) if $help;
+
+while (<>) {
+  print if (rand() < $sample)
+}
+
+__END__
+=head1 NAME
+
+random-sample - randomly sample lines from file(s) to STDOUT
+
+=head1 SYNOPSIS
+
+random-sample [options] [file...]
+
+=head1 OPTIONS
+
+=over 8
+
+=item B<-s (--sample)>
+
+Sets the sample rate; when unspecified defaults to 0.01 (1%).
+
+=item B<-h (--help)>
+
+Prints this help message and exits.
+
+=back
+
+=head1 DESCRIPTION
+B<random-sample> reads each filename specifed on STDIN line-by-line and will randomly output a line based on the sample size (default of 1%).
+
+=cut
