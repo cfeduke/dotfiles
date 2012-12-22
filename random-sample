@@ -37,6 +37,9 @@ Prints this help message and exits.
 =back
 
 =head1 DESCRIPTION
-B<random-sample> reads each filename specifed on STDIN line-by-line and will randomly output a line based on the sample size (default of 1%).
+B<random-sample> reads each filename specifed line-by-line and will randomly output a line based on the sample size (default of 1%).
 
+When provided with no command line arguments reads from STDIN.
+
+This program uses random sample so its not guaranteed to output the precise percentage specified, though statistically the larger the file, the closer it will get.
 =cut
