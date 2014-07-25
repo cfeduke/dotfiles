@@ -1,3 +1,0 @@
-#!/bin/bash
-
-ps aux | grep "$1" | grep -v grep | cut -d ' ' -f 10 | xargs kill -9 

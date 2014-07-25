@@ -1,3 +1,0 @@
-#!/bin/bash
-/tank/cb/util/cbclean s
-/tank/cb/util/hdformat
